@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # TODO: What can we improve about this model?
 
   # TODO: Implement #accepted_contacts which should return all users that have
-  #       accepted contact with this user. Use test-driven development to imlement it.
+  #       accepted the contact with this user. Use test-driven development to implement it.
 
   # TODO: Let #organization_contact_suggestions return all organization users
   #       which aren't contacts of this user, ordered by the number of contacts
