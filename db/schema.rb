@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_25_085224) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_25_130455) do
   create_table "user_contacts", force: :cascade do |t|
-    t.integer "requesting_user_id_id", null: false
-    t.integer "requested_user_id_id", null: false
+    t.integer "requesting_user_id", null: false
+    t.integer "requested_user_id", null: false
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["requested_user_id_id"], name: "index_user_contacts_on_requested_user_id_id"
-    t.index ["requesting_user_id_id"], name: "index_user_contacts_on_requesting_user_id_id"
+    t.index ["requested_user_id"], name: "index_user_contacts_on_requested_user_id"
+    t.index ["requesting_user_id"], name: "index_user_contacts_on_requesting_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,6 +30,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_25_085224) do
     t.string "type"
   end
 
-  add_foreign_key "user_contacts", "users", column: "requested_user_id_id"
-  add_foreign_key "user_contacts", "users", column: "requesting_user_id_id"
+  add_foreign_key "user_contacts", "users", column: "requested_user_id"
+  add_foreign_key "user_contacts", "users", column: "requesting_user_id"
 end
