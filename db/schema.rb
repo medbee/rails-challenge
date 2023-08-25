@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_25_084252) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_25_085224) do
   create_table "user_contacts", force: :cascade do |t|
     t.integer "requesting_user_id_id", null: false
     t.integer "requested_user_id_id", null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_25_084252) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
   end
 
   add_foreign_key "user_contacts", "users", column: "requested_user_id_id"
