@@ -18,3 +18,5 @@ UserContact.create!(requesting_user: organization1, requested_user: doctor3, sta
 UserContact.create!(requesting_user: doctor1, requested_user: organization2, status: nil)
 UserContact.create!(requesting_user: organization2, requested_user: doctor2, status: 'accepted')
 UserContact.create!(requesting_user: doctor3, requested_user: organization2, status: 'rejected')
+
+# TODO: Fix problem with seeds
